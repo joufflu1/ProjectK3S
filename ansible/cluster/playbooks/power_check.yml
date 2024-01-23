@@ -1,0 +1,14 @@
+- name: Linux pi power check
+  hosts: all
+  gather_facts: no
+  remote_user: david 
+  become: true
+ 
+  tasks:
+    - name: PowerCheck
+      ansible.builtin.command:
+        cmd: vcgencmd get_throttled
+      register: command_output
+
+    - debug:
+        var: command_output.stdout_lines

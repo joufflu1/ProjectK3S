@@ -1,0 +1,10 @@
+---
+- name: Reboot cluster servers staggered
+  hosts: all
+  become: true
+  gather_facts: true
+  serial: 4
+  tasks:
+    - name: Reboot
+      ansible.builtin.reboot:
+        msg: "Rebooting machine in 5 seconds"

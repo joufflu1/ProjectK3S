@@ -1,0 +1,9 @@
+- name: Linux pi halt 
+  hosts: all
+  gather_facts: no
+  remote_user: david 
+  become: true
+ 
+  tasks:
+    - name: shutdown
+      command: /sbin/shutdown -h now

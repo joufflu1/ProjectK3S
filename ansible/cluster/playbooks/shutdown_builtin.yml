@@ -1,0 +1,10 @@
+---
+- name: Shutdown cluster servers staggered
+  hosts: all
+  become: true
+  gather_facts: false
+  serial: 4
+  tasks:
+    - name: shutdown
+      community.general.shutdown:
+        msg: "Shutdown machine in 5 seconds"

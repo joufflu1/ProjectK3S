@@ -1,0 +1,3 @@
+[submodule "ansible/cluster/Kubernetes-Cluster-Setup-Automation"]
+	path = ansible/cluster/Kubernetes-Cluster-Setup-Automation
+	url = https://github.com/gerardpontino/Kubernetes-Cluster-Setup-Automation.git
